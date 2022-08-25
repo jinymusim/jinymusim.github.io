@@ -1,0 +1,20 @@
+/* Project page */
+
+.project-title {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.grid-space {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.grid-column {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 3px;
+}

@@ -1,0 +1,23 @@
+
+/* HTML main layout styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Shared link layout*/
+.link-style{
+    transition: opacity 0.2s;
+}
+
+.link-style:hover {
+    opacity: 0.7;
+}
+
+.link-style:active {
+    opacity: 0.5;
+}
+
+.img-link {
+    width: 90%;
+    margin-bottom: 1vw;
+}

@@ -1,0 +1,24 @@
+/* Index page */
+
+.index-grid {
+    display: grid;
+    margin: 1vw 20vw 15vw 4vw;
+    grid-template-columns: 20vw  1fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+.about-me p {
+    font-size: 15px;
+    margin-bottom: auto;
+}
+
+.about-me h1 {
+    font-size: xx-large;
+    margin-bottom: 5px;
+}
+
+.project-sample h2 {
+    font-size: x-large;
+    margin-bottom: 5px
+}
