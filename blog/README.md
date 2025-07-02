@@ -1,6 +1,8 @@
 # Blog
 
-This directory contains the markdown-based blog system for the personal website.
+This directory contains the markdown-based blog system that powers the main page of the personal website.
+
+**Note:** The blog is now the default homepage (`index.html`).
 
 ## Structure
 
