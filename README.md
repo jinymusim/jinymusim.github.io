@@ -1,82 +1,44 @@
-# Michal Chudoba - Personal Website
+# jinymusim.github.io
 
-A personal website featuring a markdown-based blog system, document viewer, and academic CV.
+Personal page of Michal Chudoba: a short about text, the CV and the publication list.
 
-## 🌐 Live Site
-Visit: [https://jinymusim.github.io](https://jinymusim.github.io)
+**Live:** https://jinymusim.github.io
 
-## 📖 About
-This is a personal website for Michal Chudoba, a computer science doctoral student at the University of Stavanger. The site features:
+## Contents
 
-- **Blog** - Markdown-based blog system (main page)
-- **Documents** - PDF viewer for academic documents and CV
-- **Professional Links** - LinkedIn and contact information
-
-## 🏗️ Structure
-
-```text
-├── index.html              # Main page (blog)
-├── documents.html          # Document viewer page
-├── blog/                   # Blog system
-│   ├── posts/             # Markdown blog posts
-│   └── README.md          # Blog documentation
-├── js/                    # JavaScript modules
-│   ├── blog-loader.js     # Blog engine
-│   └── pdf-loader.js      # PDF viewer
-├── styles/                # CSS stylesheets
-│   ├── shared-styles.css  # Common styles
-│   ├── blog-styles.css    # Blog-specific styles
-│   └── documents-styles.css # Document viewer styles
-├── images/                # Logo and images
-├── pdfs/                  # PDF documents
-└── old-index.html         # Backup of original homepage
+```
+index.html          about, links, publications
+404.html            minimal not-found page
+pdfs/cv.pdf         CV
+assets/css/site.css one hand-written stylesheet
+assets/img/         social preview (og-cover.png|webp)
 ```
 
-## ✨ Features
+There is no build step, no framework and no webfonts. Pages use root-relative
+paths, so preview with a local server rather than the `file://` protocol:
 
-### Blog System
-- **Markdown-based** - Write posts in simple markdown
-- **Syntax highlighting** - Code blocks with Prism.js
-- **Categories** - Organize posts by topic
-- **Responsive design** - Mobile-friendly layout
-- **Fast loading** - Static files, no database
+```bash
+cd jinymusim.github.io && python3 -m http.server 8000   # http://localhost:8000
+```
 
-### Document Viewer
-- **PDF integration** - View PDFs directly in browser
-- **CV display** - Academic curriculum vitae
-- **Download options** - Direct download links
+## Editing
 
-## 🚀 Technology Stack
+- About text: the `#about` section of `index.html`.
+- Publications: the `<ol class="pub-list">` in `index.html`, newest first. Each entry
+  is a title (linked to the DOI, arXiv or ACL Anthology), then authors and venue.
+- CV: replace `pdfs/cv.pdf`.
+- Colours and type: the token block at the top of `assets/css/site.css`.
 
-- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
-- **CSS Framework**: Bootstrap 5.2
-- **Markdown Parser**: Marked.js
-- **Syntax Highlighting**: Prism.js
-- **Icons**: Font Awesome 6
-- **Hosting**: GitHub Pages
+Presentations, talks and blog notes are deliberately not included.
 
-## 📝 Adding Blog Posts
+## Deploying
 
-1. Create a markdown file in `blog/posts/`
-2. Add post configuration to `js/blog-loader.js`
-3. Commit and push to GitHub
+GitHub Pages serves this repository from `main` (branch root):
 
-See `blog/README.md` for detailed instructions.
+```bash
+git add -A && git commit -m "Simplify site to about, CV and publications" && git push
+```
 
-## 🎨 Customization
+## Licence
 
-The site uses a consistent yellow/gold color scheme (`#ffc107`) throughout. Key styling files:
-
-- `styles/shared-styles.css` - Common components
-- `styles/blog-styles.css` - Blog-specific styling
-- `styles/documents-styles.css` - Document viewer styling
-
-## 📄 License
-
-This project is licensed under the terms found in the [LICENSE](LICENSE) file.
-
-## 👤 Contact
-
-- **Email**: peritum.michal@gmail.com
-- **LinkedIn**: [Michal Chudoba](http://linkedin.com/in/michal-chudoba-06603b241)
-- **Institution**: University of Stavanger
+Content © Michal Chudoba. Code and layout under the terms in `LICENSE`.

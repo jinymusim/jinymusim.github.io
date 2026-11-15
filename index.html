@@ -1,105 +1,107 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Michal's Personal Page</title>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michal Chudoba</title>
+  <meta name="description" content="Michal Chudoba is a PhD candidate and research fellow at the University of Stavanger, working on multimodal learning and images as trainable adapters.">
+  <meta name="theme-color" content="#fdfcf9">
+  <meta property="og:title" content="Michal Chudoba">
+  <meta property="og:description" content="PhD candidate and research fellow, University of Stavanger.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jinymusim.github.io/assets/img/og-cover.png">
+  <link rel="canonical" href="https://jinymusim.github.io/">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231b1a18'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia' font-size='32' fill='%23fdfcf9'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="wrap masthead-inner">
+      <a class="site-title" href="/">Michal Chudoba</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a class="nav-cv" href="/pdfs/cv.pdf">CV</a>
+      </nav>
+    </div>
+  </header>
 
-        <link rel="stylesheet" type="text/css" href="styles/shared-styles.css">
-        <link rel="stylesheet" type="text/css" href="styles/blog-styles.css"> 
+  <main id="main" class="wrap">
+    <section class="intro" id="about">
+      <h1>Michal Chudoba</h1>
+      <p class="role">PhD candidate and research fellow · University of Stavanger</p>
+      <div class="prose">
+        <p>I work on multimodal language models and on cheaper ways to adapt them. Instead of editing weights, I train a single image that the model reads as part of its prompt: a small, portable adapter that leaves the model and the serving stack untouched.</p>
+        <p>I have also applied the idea to drilling and well data, where learned images stand in for an ontology and a heavy agent toolkit. Before Stavanger I worked on recommender systems and LLMs at Seznam.cz, and studied computer science at Charles University in Prague.</p>
+      </div>
+      <ul class="links">
+        <li><a href="mailto:michal.chudoba@uis.no">Email</a></li>
+        <li><a href="/pdfs/cv.pdf">CV</a></li>
+        <li><a href="https://scholar.google.com/scholar?q=author%3A%22Michal+Chudoba%22">Google Scholar</a></li>
+        <li><a href="https://github.com/jinymusim">GitHub</a></li>
+        <li><a href="https://orcid.org/0009-0001-2233-4074">ORCID</a></li>
+        <li><a href="https://www.linkedin.com/in/michal-chudoba-06603b241">LinkedIn</a></li>
+      </ul>
+    </section>
 
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-            crossorigin="anonymous"></script>
-        
-        <!-- Font Awesome for icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-        
-        <!-- Prism.js for code syntax highlighting -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-bash.min.js"></script>
-        
-        <!-- Marked.js for markdown parsing -->
-        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-        
-        <!-- Blog loader -->
-        <script src="js/blog-loader.js"></script>
-    </head>
-    <body>
-        <header>
-            <div class="p-1 bg-warning text-dark">
-                <a href="index.html">
-                    <img src="images/logos/jinymusim-logo.png"  class="img-fluid" alt="jinymusim logo"/>
-                </a>
-            </div>
-        </header>
-        <nav class="navbar navbar-expand-lg sticky-top bg-warning mb-5">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link mb-0" href="index.html">Home</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link mb-0" href="documents.html">Documents</a>
-                </li>
-                <li class="nav-item active">
-                    <a target="_blank" class="nav-link mb-0" href="http://linkedin.com/in/michal-chudoba-06603b241">LinkedIn</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link mb-0" href="mailto:peritum.michal@gmail.com">Mail me</a>
-                </li>
-            </ul>
-        </nav>
+    <section class="pubs" id="publications">
+      <h2>Publications</h2>
+      <p class="note">Articles and preprints. Also on <a href="https://scholar.google.com/scholar?q=author%3A%22Michal+Chudoba%22">Google Scholar</a> and <a href="https://orcid.org/0009-0001-2233-4074">ORCID</a>.</p>
+      <ol class="pub-list">
+        <li>
+          <p class="pub-title"><a href="https://arxiv.org/abs/2606.11854">Fine-Tuning Multi-Modal LLMs with ART: Art-Based Reinforcement Training</a></p>
+          <p class="pub-meta"><b>Michal Chudoba</b>, Sergey Alyaev, Petra Galuscakova, Tomasz Wiktorski · arXiv:2606.11854 · 2026</p>
+        </li>
+        <li>
+          <p class="pub-title"><a href="https://doi.org/10.3997/2214-4609.202639085">Human-in-the-Loop AI Translation of WITSML Mnemonics to Interoperable D-WIS Standard</a></p>
+          <p class="pub-meta">M. Chudoba, L. Zhang, S. Alyaev, T. Wiktorski · EAGE Digitalization Conference · 2026</p>
+        </li>
+        <li>
+          <p class="pub-title">Reflective Agents for Knowledge Graph Traversal</p>
+          <p class="pub-meta"><b>Michal Chudoba</b> · 2026</p>
+        </li>
+        <li>
+          <p class="pub-title"><a href="https://doi.org/10.5324/2ethqv02">Revisiting Structured Representation Use in LLM</a></p>
+          <p class="pub-meta"><b>Michal Chudoba</b>, Tomasz Wiktorski, Sergey Alyaev · Norsk IKT-konferanse (NIKT) · 2025</p>
+        </li>
+        <li>
+          <p class="pub-title"><a href="https://aclanthology.org/2025.nlp4dh-1.45/">EduPo: Progress and Challenges of Automated Analysis and Generation of Czech Poetry</a></p>
+          <p class="pub-meta">Rudolf Rosa, David Mareček, Tomáš Musil, <b>Michal Chudoba</b>, Jakub Landsperský · NLP4DH · 2025</p>
+        </li>
+        <li>
+          <p class="pub-title"><a href="https://doi.org/10.1051/epjconf/202533701222">Docu-Bot: AI assisted user support</a></p>
+          <p class="pub-meta">J. Chudoba, <b>M. Chudoba</b>, L. Hejtmánek · EPJ Web of Conferences 337, 01222 · 2025</p>
+        </li>
+        <li>
+          <p class="pub-title"><a href="https://doi.org/10.22323/1.488.0025">RAG chatbot for user and administrator support</a></p>
+          <p class="pub-meta">J. Chudoba, <b>M. Chudoba</b> · ISGC, Proceedings of Science · 2025</p>
+        </li>
+        <li>
+          <p class="pub-title"><a href="https://arxiv.org/abs/2407.12790">GPT Czech Poet: Generation of Czech Poetic Strophes with Language Models</a></p>
+          <p class="pub-meta"><b>Michal Chudoba</b>, Rudolf Rosa · arXiv:2407.12790 · 2024</p>
+        </li>
+        <li>
+          <p class="pub-title"><a href="https://doi.org/10.22323/1.434.0005">Extension of local dCache instance capacity using national e-infrastructure</a></p>
+          <p class="pub-meta">J. Chudoba, M. Svatoš, A. Mikula, P. Vokáč, <b>M. Chudoba</b> · ISGC &amp; HEPiX, Proceedings of Science · 2023</p>
+        </li>
+      </ol>
+    </section>
+  </main>
 
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <div id="blog-content">
-                        <div class="blog-header">
-                            <h1><i class="fas fa-blog"></i> Michal Chudoba</h1>
-                            <p class="lead">Computer scientist, AI researcher, and doctoral student sharing thoughts on technology and research</p>
-                        </div>
-                        
-                        <div id="blog-post-content">
-                            <!-- Blog post content will be loaded here -->
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4">
-                    <div class="blog-sidebar">
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <h5><i class="fas fa-list"></i> Recent Posts</h5>
-                            </div>
-                            <div class="card-body">
-                                <div id="blog-post-list">
-                                    <!-- Blog post list will be loaded here -->
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <h5><i class="fas fa-tags"></i> Categories</h5>
-                            </div>
-                            <div class="card-body">
-                                <div id="blog-categories">
-                                    <!-- Categories will be loaded here -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <footer class="mt-5 py-4 bg-light text-center">
-            <p class="text-muted">&copy; 2025 Michal Chudoba. All rights reserved.</p>
-        </footer>
-    </body>
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© <span id="year">2026</span> Michal Chudoba</p>
+      <ul class="footer-links">
+        <li><a href="mailto:michal.chudoba@uis.no">Email</a></li>
+        <li><a href="/pdfs/cv.pdf">CV</a></li>
+        <li><a href="https://scholar.google.com/scholar?q=author%3A%22Michal+Chudoba%22">Google Scholar</a></li>
+        <li><a href="https://github.com/jinymusim">GitHub</a></li>
+        <li><a href="https://orcid.org/0009-0001-2233-4074">ORCID</a></li>
+        <li><a href="https://www.linkedin.com/in/michal-chudoba-06603b241">LinkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = String(new Date().getFullYear());</script>
+</body>
 </html>
